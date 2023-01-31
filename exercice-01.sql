@@ -44,7 +44,7 @@ WHERE id != 3
 -- Écrivez la requête qui permet de lister les students dont l'email contient la chaîne de caractères `.com`
 SELECT * 
 FROM student
-WHERE email LIKE '*.com'
+WHERE email LIKE '%.com%'
 
 
 -- Exo 1.8
@@ -56,14 +56,13 @@ WHERE created_at < '2021-01-10 00:00:00'
 -- Exo 1.9
 -- Écrivez la requête qui permet de lister les projects dont la description contient pas la chaîne de caractères `Dolores`
 SELECT *
-FROM student
-WHERE description LIKE `Dolores`
-
+FROM project
+WHERE description NOT LIKE '%Dolores%'
 -- Exo 1.10
 -- Écrivez la requête qui permet de lister les projects dont la date de création est postérieure au 1er juillet 2021 inclus
 SELECT * 
 FROM project
-WHERE start_date >= '2021-07-01 00:00:00'
+WHERE start_date > '2021-06-30 00:00:00'
 
 -- Exo 1.11
 -- Écrivez la requête qui permet de lister les students ayant un project
