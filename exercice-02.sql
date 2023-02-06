@@ -107,4 +107,11 @@ WHERE 'first_name' = 'Odette' AND 'last_name' = 'Thomas'
 -- Note : vous devez supprimez les relations avec les dépendances mais pas les dépendances.
 -- Autrement dit ne supprimez aucun student ni aucun tag.
 
-DELETE FROM 'project','project_tag','student'
+DELETE FROM 'project'
+WHERE 'name' = 'Ut delectus explicabo'
+
+DELETE FROM 'project_tag'
+WHERE 'project_id' = 16
+
+DELETE FROM 'student'
+WHERE 'project_id' = 16
